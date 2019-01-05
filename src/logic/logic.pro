@@ -5,9 +5,11 @@ TARGET = logic
 HEADERS += \
     DbConnector.h \
     pch.h \
-    Employee.h
+    Employee.h \
+    Specialization.h
 
 SOURCES += \
     DbConnector.cpp \
-    Employee.cpp
+    Employee.cpp \
+    Specialization.cpp
 

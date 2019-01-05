@@ -19,5 +19,9 @@ enum SelectedOption {
     Login
 };
 
+enum ModificationResult {
+    Successed,
+    Failed
+};
 
 #endif // PCH_H
