@@ -34,6 +34,8 @@ public:
 
     std::string getSurname() const;
 
+    int getId() const;
+
 private:
     int _id = -1;
     std::string _name;

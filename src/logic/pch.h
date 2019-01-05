@@ -4,6 +4,8 @@
 #include <string>
 #include <mysql.h>
 #include <cstdlib>
+#include <ctime>
+
 typedef char* dbStr;
 
 

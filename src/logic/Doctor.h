@@ -31,7 +31,7 @@ public:
     static ModificationResult addDoctor(std::string name, std::string surname, double salary, DoctorType type, Specialization specialization, DbConnector &db);
     static ModificationResult editDoctor(int id, std::string name, std::string surname, double salary, DoctorType type, Specialization specialization,  DbConnector &db);
 
-    //static Doctor getDoctor(int id, DbConnector &db);
+    static Doctor getDoctor(int id, DbConnector &db);
 
     static bool exists(int id, DbConnector &db);
 
@@ -51,7 +51,9 @@ public:
 
     Specialization getSpecialization() const;
 
-    virtual bool checkSpecialization(const Specialization &specialization) = 0;
+    virtual bool checkSpecialization(const Specialization &specialization) {
+
+    }
 
 protected:
     int _id = -1;

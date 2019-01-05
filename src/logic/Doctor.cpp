@@ -117,28 +117,6 @@ ModificationResult Doctor::addDoctor(std::string name, std::string surname, doub
 ModificationResult Doctor::editDoctor(int id, std::string name, std::string surname, double salary, DoctorType type, Specialization specialization,  DbConnector &db) {
     std::string query = "SELECT * FROM Doctor WHERE Doctor_ID=" + std::to_string(id);
 
-
-    //użyj tego w klasach potomnych
-
-//    Doctor tmpDoctor = ;
-
-//    MYSQL_ROW row;
-//    MYSQL_RES *res = db.executeQuery(query);
-//    if (row = mysql_fetch_row(res))
-//    {
-//        return true;
-//    }
-
-//    if (!name.compare("")) {
-//        name = tmpDoctor._title;
-//    }
-//    if (!kind.compare("")) {
-//        kind = tmpDoctor._kind;
-//    }
-//    if (salary < 0) {
-//        salary = tmpDoctor._quantity;
-//    }
-
     if (Specialization::getSpecialization(specialization.getId(), db).getId() != -1 && exists(id, db)) {
 
 
@@ -154,6 +132,18 @@ ModificationResult Doctor::editDoctor(int id, std::string name, std::string surn
     }
 
     return ModificationResult::Failed;
+}
+
+Doctor Doctor::getDoctor(int id, DbConnector &db)
+{
+    std::string query = "SELECT * FROM Doctor WHERE Doctor_ID=" + std::to_string(id);
+    MYSQL_ROW row;
+    MYSQL_RES *res = db.executeQuery(query);
+    if (row = mysql_fetch_row(res))
+    {
+        return Doctor(atoi(row[0]), row[1], row[2], atof(row[3]), atoi(row[4]), atoi(row[5]));
+    }
+    return Doctor(-1, "", "", 0, DoctorType::NoType, Specialization(""));
 }
 
 

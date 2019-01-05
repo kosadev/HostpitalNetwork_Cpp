@@ -93,7 +93,7 @@ ModificationResult Patient::editPatient(int id, std::string name, std::string su
 
 Patient Patient::getPatient(int id, DbConnector &db)
 {
-    std::string query = "SELECT * FROM Patient WHERE Patient_ID=" + std::to_string(id) + "";
+    std::string query = "SELECT * FROM Patient WHERE Patient_ID=" + std::to_string(id);
     MYSQL_ROW row;
     MYSQL_RES *res = db.executeQuery(query);
     if (row = mysql_fetch_row(res))
