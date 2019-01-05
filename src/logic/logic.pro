@@ -9,7 +9,8 @@ HEADERS += \
     Specialization.h \
     Doctor.h \
     FullTimeDoctor.h \
-    ContractDoctor.h
+    ContractDoctor.h \
+    Patient.h
 
 SOURCES += \
     DbConnector.cpp \
@@ -17,5 +18,6 @@ SOURCES += \
     Specialization.cpp \
     Doctor.cpp \
     FullTimeDoctor.cpp \
-    ContractDoctor.cpp
+    ContractDoctor.cpp \
+    Patient.cpp
 
