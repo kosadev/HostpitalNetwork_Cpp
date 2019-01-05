@@ -22,8 +22,8 @@ public:
     static ModificationResult addSpecialization(std::string name, DbConnector db);
     static ModificationResult editSpecialization(int id, std::string name, DbConnector db);
 
-    int getId();
-    std::string getName();
+    int getId() const;
+    std::string getName() const;
 
     static Specialization getSpecialization(int id, DbConnector &db);
     static Specialization getSpecialization(std::string name, DbConnector &db);

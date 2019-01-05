@@ -6,10 +6,16 @@ HEADERS += \
     DbConnector.h \
     pch.h \
     Employee.h \
-    Specialization.h
+    Specialization.h \
+    Doctor.h \
+    FullTimeDoctor.h \
+    ContractDoctor.h
 
 SOURCES += \
     DbConnector.cpp \
     Employee.cpp \
-    Specialization.cpp
+    Specialization.cpp \
+    Doctor.cpp \
+    FullTimeDoctor.cpp \
+    ContractDoctor.cpp
 

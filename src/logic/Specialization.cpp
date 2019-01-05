@@ -122,11 +122,11 @@ ModificationResult Specialization::editSpecialization(int id, std::string name, 
 }
 
 
-int Specialization::getId() {
+int Specialization::getId() const {
     return _id;
 }
 
-std::string Specialization::getName() {
+std::string Specialization::getName() const {
     return _name;
 }
 
